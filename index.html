@@ -43,6 +43,42 @@
         .custom-modal p {
             opacity: 0.8;
         }
+
+        .modal-image {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .modal-image:hover {
+            opacity: 0.8;
+        }
+        
+        .image-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image-popup img {
+            max-width: 90%;
+            max-height: 90vh;
+        }
+        
+        .image-popup .close-popup {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -278,10 +314,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__fadeInLeft">
-                                                        <img src="images/posters/code.jpeg" class="img-fluid" alt="πthon Poster">
+                                                        <img src="images/posters/code.jpeg" class="img-fluid modal-image" alt="πthon Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__fadeInRight">
-                                                        <img src="images/posters/code_guidelines.jpeg" class="img-fluid" alt="πthon Guidelines">
+                                                        <img src="images/posters/code_guidelines.jpeg" class="img-fluid modal-image" alt="πthon Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -316,10 +352,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__zoomIn">
-                                                        <img src="images/posters/logic.jpeg" class="img-fluid" alt="Logic Poster">
+                                                        <img src="images/posters/logic.jpeg" class="img-fluid modal-image" alt="Logic Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__zoomIn">
-                                                        <img src="images/posters/logic_guidelines.jpeg" class="img-fluid" alt="Logic Guidelines">
+                                                        <img src="images/posters/logic_guidelines.jpeg" class="img-fluid modal-image" alt="Logic Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -354,10 +390,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__bounceIn">
-                                                        <img src="images/posters/find.jpeg" class="img-fluid" alt="Find-X Poster">
+                                                        <img src="images/posters/find.jpeg" class="img-fluid modal-image" alt="Find-X Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__bounceIn">
-                                                        <img src="images/posters/find_guidelines.jpeg" class="img-fluid" alt="Find-X Guidelines">
+                                                        <img src="images/posters/find_guidelines.jpeg" class="img-fluid modal-image" alt="Find-X Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -393,10 +429,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__bounceIn">
-                                                        <img src="images/posters/puzzle.jpeg" class="img-fluid" alt="Decrypto Poster">
+                                                        <img src="images/posters/puzzle.jpeg" class="img-fluid modal-image" alt="Decrypto Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__bounceIn">
-                                                        <img src="images/posters/puzzle_guidelines.jpeg" class="img-fluid" alt="Decrypto Guidelines">
+                                                        <img src="images/posters/puzzle_guidelines.jpeg" class="img-fluid modal-image" alt="Decrypto Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -491,16 +527,16 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__fadeIn">
-                                                        <img src="images/posters/exhibition.jpeg" class="img-fluid" alt="Exhibition Poster">
+                                                        <img src="images/posters/exhibition.jpeg" class="img-fluid modal-image" alt="Exhibition Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__fadeIn">
-                                                        <img src="images/posters/exhibition_guidelines.jpeg" class="img-fluid" alt="Exhibition Guidelines">
+                                                        <img src="images/posters/exhibition_guidelines.jpeg" class="img-fluid modal-image" alt="Exhibition Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__fadeIn">
-                                                        <img src="images/posters/exhibiiton_guidelines_2.jpeg" class="img-fluid" alt="Exhibition Guidelines 2">
+                                                        <img src="images/posters/exhibiiton_guidelines_2.jpeg" class="img-fluid modal-image" alt="Exhibition Guidelines 2" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__fadeIn">
-                                                        <img src="images/posters/exhibition_guidelines_3.jpeg" class="img-fluid" alt="Exhibition Guidelines 3">
+                                                        <img src="images/posters/exhibition_guidelines_3.jpeg" class="img-fluid modal-image" alt="Exhibition Guidelines 3" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -533,7 +569,7 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-12 animate__animated animate__swing">
-                                                        <img src="images/posters/fashion.jpeg" class="img-fluid" alt="Fashion Show Poster">
+                                                        <img src="images/posters/fashion.jpeg" class="img-fluid modal-image" alt="Fashion Show Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -566,10 +602,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__slideInUp">
-                                                        <img src="images/posters/speak.jpeg" class="img-fluid" alt="Speakathon Poster">
+                                                        <img src="images/posters/speak.jpeg" class="img-fluid modal-image" alt="Speakathon Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__slideInUp">
-                                                        <img src="images/posters/speak_guidelines.jpeg" class="img-fluid" alt="Speakathon Guidelines">
+                                                        <img src="images/posters/speak_guidelines.jpeg" class="img-fluid modal-image" alt="Speakathon Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -602,10 +638,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__zoomIn">
-                                                        <img src="images/posters/quiz.jpeg" class="img-fluid" alt="Quiz Poster">
+                                                        <img src="images/posters/quiz.jpeg" class="img-fluid modal-image" alt="Quiz Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__zoomIn">
-                                                        <img src="images/posters/quiz_guidelines.jpeg" class="img-fluid" alt="Quiz Guidelines">
+                                                        <img src="images/posters/quiz_guidelines.jpeg" class="img-fluid modal-image" alt="Quiz Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -638,10 +674,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__swing">
-                                                        <img src="images/posters/dance.jpeg" class="img-fluid" alt="Dance Poster">
+                                                        <img src="images/posters/dance.jpeg" class="img-fluid modal-image" alt="Dance Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__swing">
-                                                        <img src="images/posters/dance_guidelines.jpeg" class="img-fluid" alt="Dance Guidelines">
+                                                        <img src="images/posters/dance_guidelines.jpeg" class="img-fluid modal-image" alt="Dance Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -674,10 +710,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__pulse">
-                                                        <img src="images/posters/e-game.jpeg" class="img-fluid" alt="E-Gaming Event 1 Poster">
+                                                        <img src="images/posters/e-game.jpeg" class="img-fluid modal-image" alt="E-Gaming Event 1 Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__pulse">
-                                                        <img src="images/posters/e-game_guidelines.jpeg" class="img-fluid" alt="E-Gaming Event 1 Guidelines">
+                                                        <img src="images/posters/e-game_guidelines.jpeg" class="img-fluid modal-image" alt="E-Gaming Event 1 Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -710,10 +746,10 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-6 animate__animated animate__pulse">
-                                                        <img src="images/posters/e-game_2.jpeg" class="img-fluid" alt="E-Gaming Event 2 Poster">
+                                                        <img src="images/posters/e-game_2.jpeg" class="img-fluid modal-image" alt="E-Gaming Event 2 Poster" onclick="showImagePopup(this.src)">
                                                     </div>
                                                     <div class="col-md-6 animate__animated animate__pulse">
-                                                        <img src="images/posters/e-game_2_guidelines.jpeg" class="img-fluid" alt="E-Gaming Event 2 Guidelines">
+                                                        <img src="images/posters/e-game_2_guidelines.jpeg" class="img-fluid modal-image" alt="E-Gaming Event 2 Guidelines" onclick="showImagePopup(this.src)">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1230,6 +1266,41 @@
             </div>
         </div>
     </div> -->
+
+    <div class="image-popup" onclick="hideImagePopup()">
+        <span class="close-popup">&times;</span>
+        <img src="" alt="Popup Image">
+    </div>
+
+    <script>
+        function showImagePopup(imageSrc) {
+            const popup = document.querySelector('.image-popup');
+            const popupImg = popup.querySelector('img');
+            popupImg.src = imageSrc;
+            popup.style.display = 'flex';
+            // Prevent scrolling when popup is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideImagePopup() {
+            const popup = document.querySelector('.image-popup');
+            popup.style.display = 'none';
+            // Restore scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close popup when pressing ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                hideImagePopup();
+            }
+        });
+
+        // Prevent popup from closing when clicking on the image
+        document.querySelector('.image-popup img').addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    </script>
 </body>
 
 </html>
