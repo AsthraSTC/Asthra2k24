@@ -17,7 +17,7 @@
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <style>
         .custom-modal {
             background: var(--dark-color);
@@ -78,6 +78,22 @@
             color: #fff;
             font-size: 30px;
             cursor: pointer;
+        }
+
+        .video-gallery {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-cell {
+            width: 100%;
+            margin-right: 10px;
+        }
+
+        .gallery-cell video {
+            width: 100%;
+            height: auto;
         }
     </style>
 
@@ -863,30 +879,22 @@
                 <div class="row">
                     <div class="col-lg-8 col-12 mx-auto">
                         <h2 class="text-center mb-4">Gallery</h2>
-                        <div class="carousel" data-flickity='{ "draggable": true,"groupCells": 2,
-                        "wrapAround": true,"prevNextButtons": false,
-                        "pageDots": false}'>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <video height="240px" style="border-radius:20px;" controls autoplay="autoplay" loop="loop">
-                                        <source src="video/video12.mp4" type="video/mp4">
-
-                                        Your browser does not support this.
-                                    </video>
-                                </div>
-                                <div class="col-md-6">
-                                    <video height="240px" style="border-radius:20px;" controls autoplay="autoplay" loop="loop">
-                                        <source src="video/video11.mp4" type="video/mp4">
-
-                                        Your browser does not support this.
-                                    </video>
-                                </div>
+                        <div class="video-gallery" data-flickity='{ "wrapAround": true, "pageDots": false }'>
+                            <div class="gallery-cell">
+                                <video controls>
+                                    <source src="video/video11.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="gallery-cell">
+                                <video controls>
+                                    <source src="video/video12.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
             </div>
         </section>
 
